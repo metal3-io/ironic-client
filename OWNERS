@@ -6,9 +6,11 @@ approvers:
  - dtantsur
  - elfosardo
  - hardys
+ - iurygregory
 
 reviewers:
- - iurygregory
+ - zaneb
+
+emeritus_reviewers:
  - maelk
  - stbenjam
- - zaneb
