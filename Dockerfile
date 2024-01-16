@@ -3,6 +3,8 @@ FROM quay.io/centos/centos:stream9
 # Help people find the actual baremetal command
 COPY scripts/openstack /usr/bin/openstack
 
+COPY scripts/ironic.profile /etc/profile.d/ironic.sh
+
 RUN dnf install -y python3 python3-requests && \
     curl https://raw.githubusercontent.com/openstack/tripleo-repos/master/plugins/module_utils/tripleo_repos/main.py | python3 - -b master current-tripleo && \
     dnf update -y --setopt=install_weak_deps=False && \
@@ -11,4 +13,4 @@ RUN dnf install -y python3 python3-requests && \
     rm -rf /var/cache/{yum,dnf}/* && \
     chmod +x /usr/bin/openstack
 
-ENTRYPOINT ["/usr/bin/baremetal"]
+ENTRYPOINT ["bash", "-lc", "/usr/bin/baremetal"]
