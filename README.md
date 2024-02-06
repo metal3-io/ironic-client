@@ -24,6 +24,14 @@ kubectl debug -it $(kubectl get -n baremetal-operator-system pods -l name=bareme
 
 This opens an interactive baremetal cli witin the debug container.
 
+The default authentication type used is "none".
+You may override it, e.g. when using `http_basic`, by
+passing the `--env` parameter to the `kubectl debug` call:
+
+```
+--env OS_AUTH_TYPE=http_basic,OS_ENDPOINT=http://localhost:1234,OS_USERNAME=foo,OS_PASSWORD=bar
+```
+
 The baremetal command can be used to access the
 Python Ironic Client Standalone CLI e.g. one can use
 
