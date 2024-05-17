@@ -1,0 +1,12 @@
+# See the OWNERS docs: https://git.k8s.io/community/contributors/guide/owners.md
+
+aliases:
+  ironic-client-maintainers:
+  - bfournie
+  - derekhiggins
+  - dtantsur
+  - elfosardo
+  - iurygregory
+
+  ironic-client-reviewers:
+  - zaneb
