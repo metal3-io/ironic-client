@@ -4,7 +4,7 @@ FROM quay.io/centos/centos:stream9
 COPY scripts/openstack /usr/bin/openstack
 
 RUN dnf install -y python3 python3-pip && \
-    pip install python-ironicclient python-ironic-inspector-client --no-cache-dir && \
+    pip install python-ironicclient --prefix /usr --no-cache-dir && \
     chmod +x /usr/bin/openstack && \
     dnf update -y && \
     dnf clean all && \
