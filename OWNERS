@@ -1,19 +1,15 @@
 # See the OWNERS docs at https://go.k8s.io/owners
 
 approvers:
- - bfournie
- - derekhiggins
- - dtantsur
- - elfosardo
- - iurygregory
+- ironic-client-maintainers
 
 reviewers:
- - zaneb
+- ironic-client-maintainers
+- ironic-client-reviewers
 
 emeritus_reviewers:
- - maelk
- - stbenjam
+- maelk
+- stbenjam
 
 emeritus_approvers:
- - hardys
-
+- hardys
